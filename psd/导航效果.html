@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test导航效果</title>
+	<style type="text/css">
+    *{margin:0;padding:0;list-style:none;}
+    body{background:#F5F5F5;}
+    .nav{width:752px;height:270px;margin:100px auto;border:1px solid #ccc;padding:10px 0 0 10px;}
+    .nav li{width:178px;height:125px;float:left;margin:0 10px 10px 0;overflow:hidden;position:relative;}
+    .nav img{display:block;}
+    .nav div{width:178px;height:24px;background:#000;position:absolute;left:0;bottom:-24px;}
+    .nav p{width:178px;height:24px;color:#fff;font-size:12px;position:absolute;left:0;bottom:-24px;line-height:24px;padding-left:26px;background:url(images/01/bg.png)no-repeat;}
+	</style>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+    	//让div背景半透明；
+    	$('.nav div').stop().fadeTo(0,0.5);
+    	//让每一个p标签都添加相应的背景图标；
+    	$('.nav p').each(function(index, el) {
+    		var p_top=index*-24;
+    		$(el).css('background-position','0 '+p_top+'px')
+    	});
+    	//让鼠标移到显示div与p标签，离开则消失；
+    	$('.nav li').mouseover(function(event) {
+    		$(this).children('.nav div,.nav p').stop().animate({bottom:0},500);
+    	}).mouseout(function(event) {
+    		$(this).children('.nav div,.nav p').stop().animate({bottom:-24},500);
+    	});;
+    })
+    </script>
+</head>
+<body>
+	<div class="nav">
+		<ul>
+			<li><img src="images/01/01.jpg" width="178" height="125"/>
+				<div></div>
+				<p>百度一下，你就知道</p>
+			</li>
+			<li><img src="images/01/02.jpg" width="178" height="125"/>
+                <div></div>
+				<p>百度一下，你就知道</p>
+			</li>
+			<li><img src="images/01/03.jpg" width="178" height="125"/>    
+				<div ></div>
+				<p>百度一下，你就知道</p></li>
+			<li><img src="images/01/04.jpg" width="178" height="125"/>    
+				<div ></div>
+				<p>百度一下，你就知道</p></li>
+			<li><img src="images/01/05.jpg" width="178" height="125"/>    
+				<div ></div>
+				<p>百度一下，你就知道</p></li>
+			<li><img src="images/01/06.jpg" width="178" height="125"/>    
+				<div ></div>
+				<p>百度一下，你就知道</p></li>
+			<li><img src="images/01/07.jpg" width="178" height="125"/>    
+				<div ></div>
+				<p>百度一下，你就知道</p></li>
+			<li><img src="images/01/08.jpg" width="178" height="125"/>    
+				<div ></div>
+				<p>百度一下，你就知道</p></li>
+		</ul>
+	</div>
+</body>
+</html>

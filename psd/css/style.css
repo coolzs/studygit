@@ -1,0 +1,76 @@
+*{margin:0;padding:0;}
+a{text-decoration:none;}
+header{width:100%;height:44px;border-top:1px solid #ccc;border-bottom:1px solid #ccc;background:#f6f6f6;padding:7px 50px 0px 8px;box-sizing:border-box;position:relative;}
+header .search{width:100%;height:28px;border:1px solid #999;background:#fff;border-radius:4px;line-height:28px;box-shadow:0 1px 2px 1px #CECECE;}
+header .search span{color:#666;font-size:12px;padding-left:24px;position:relative;line-height:28px;}
+header .search span:after{content:'';width:16px;height:16px;background:url(../images/un_ico_home_v66.png)no-repeat -59px -276px;position:absolute;left:8px;top:-4px;background-size:104px 327px;}
+header a{display:block;width:50px;height:28px;position:absolute;right:0;top:0;text-decoration:none;}
+header a:before{content:'';width:24px;height:26px;position:absolute;left:13px;top:2px;background:url(../images/un_ico_home_v66.png)no-repeat -59px -193px;background-size:104px 327px;}
+header a span{font-size:12px;color:#0EA1DF;font-weight:600;position:absolute;left:12px;bottom:-12px;}
+/* 本例子css -------------------------------------- */
+	.focus{ width:100%; height:auto;  margin:0 auto; position:relative; overflow:hidden;   }
+	.focus .hd{ width:100%; height:5px;  position:absolute; z-index:1; bottom:0; text-align:center;  }
+	.focus .hd ul{ overflow:hidden; display:-moz-box; display:-webkit-box; display:box; height:5px; background-color:rgba(51,51,51,0.5);   }
+	.focus .hd ul li{ -moz-box-flex:1; -webkit-box-flex:1; box-flex:1; }
+	.focus .hd ul .on{ background:#FF4000;  }
+	.focus .bd{ position:relative; z-index:0; }
+	.focus .bd li{float:left;overflow:hidden;}
+	.focus .bd li img{ width:100%;  height:auto; }
+	.focus .bd li a{ -webkit-tap-highlight-color:rgba(0, 0, 0, 0); /* 取消链接高亮 */ }
+/* 本例子css end-------------------------------------- */
+/******** nav ********/
+.nav-list{width:100%;padding:8px 8px 0 112px;overflow:hidden;position:relative;}
+.nav-list li{position:relative;float:left;width:50%;height:41px;overflow:hidden;text-align:center;line-height:41px;border-left:1px solid #f2f2f2;border-bottom:1px solid #f2f2f2;background-color:#ff697a;}
+.nav-list,.nav-list li{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;}
+.nav-list li:nth-child(5n+1){position:absolute;left:8px;top:8px;width:104px;height:82px;z-index:5;border:0 none;border-radius:5px 0 0 5px;background:url(../images/un_ico_home_v66.png) no-repeat 0 -10000px #ff697a;background-size:104px 326px;}
+/*.nav-list li:nth-child(1){background-color:#ff697a;}*/
+.nav-list li:nth-child(5n) ~ li{background-color:#3d98ff;}
+.nav-list li:nth-child(6){top:100px;}
+.nav-list li:nth-child(10n) ~ li{background-color:#5ebe00;}
+.nav-list li:nth-child(11){top:192px;}
+.nav-list li:nth-child(15n) ~ li{background-color:#FC9720;}
+.nav-list li:nth-child(16){top:284px;}
+/**** 第5n+4,第5n的底部边距10px *****/
+.nav-list li:nth-child(5n+4){margin-bottom:10px;border-bottom:0 none;}
+.nav-list li:nth-child(5n){margin-bottom:10px;border-bottom:0 none;}
+/**** 右边的圆角*****/
+.nav-list li:nth-child(5n+3){border-radius:0 5px 0 0;}
+.nav-list li:nth-child(5n){border-radius:0 0 5px 0;}
+.nav-list li a{font-size:15px;color:#fff;text-shadow:0 2px 1px rgba(0,0,0,0.2);font-weight:bold;}
+
+.nav-list li:nth-child(5n+1) a:after{content:'';width:40px;height:33px;position:absolute;left:50%;top:36px;margin-left:-20px;background:url(../images/un_ico_home_v66.png)no-repeat 0 0;background-size:104px 327px;}
+.nav-list li:nth-child(1) a:after{background-position:0 -130px;}
+.nav-list li:nth-child(6) a:after{background-position:-50px -120px;}
+.nav-list li:nth-child(11) a:after{background-position:0 -180px;}
+.nav-list li:nth-child(16) a:after{background-position:0 -240px;}
+/***** .pic-banner ******/
+.pic-banner{margin:0 8px 8px 8px;-webkit-box-sizing:border-box;box-sizing:border-box;}
+.pic-banner ul{display:table;width:100%;border:1px solid #d8d8d8;}
+.pic-banner ul li{box-sizing:border-box;display:table-cell;width:50%;}
+.pic-banner ul li:first-child{border-right:1px solid #d8d8d8;}
+.pic-banner img{width:100%;min-height:59px;vertical-align: middle}
+/******  footer *******/
+footer.tool-box{padding-bottom:5px;border-top:1px solid #ccc;text-align:center;}
+footer .tool-cn{width:100%;height:49px;background-color:#fff;border-bottom:1px solid #c2c2c2;margin-bottom:5px;text-align:center;overflow:hidden;}
+footer .tool-cn a{width:33.33%;height:100%;float:left;position:relative;text-align:center;color:#333;font-size:12px;padding-top:26px;box-sizing:border-box;}
+footer .tool-cn a:before{content:'';width:18px;height:17px;position:absolute;left:50%;top:8px;margin-left:-9px;background:url(../images/un_ico_home_v66.png)no-repeat 0 0;background-size:104px 327px;}
+footer .tool-cn .link-tel:before{background-position:-60px -153px;}
+footer .tool-cn .link-down:before{background-position:-60px -173px;}
+footer .tool-cn .link-mine:before{background-position:-60px -308px;}
+footer .tool-ver{color:#999;font-size:12px;}
+footer .tool-ver a{padding:0;text-align:center;color:#666;font-size:12px;text-decoration:none;}
+footer.tool-box p{font-size:12px;color:#999;padding:5px 0;margin:0;}
+/********** .js-header-wrap *******/
+.search-wrap{height:44px;padding:0 50px 0 45px;border-bottom:1px solid #ddd;font:normal 14px/1.5 Arial,'Lucida Grande',Verdana,'MicrosoftYahei',STXihei,hei;color:#000;background-color:#e6f0f7;position:relative;}
+form .search-box{position:relative;z-index:1;padding:7px 0;}
+form .search-box:before{content:'';width:8px;height:8px;position:absolute;left:8px;top:16px;z-index:1;border:1px solid #a9a9a9;border-radius:50%;}
+form .search-box:after{content:'';width:6px;height:1px; position:absolute;left:16px;top:26px;z-index:1;background:#a9a9a9;transform:rotate(45deg);}
+.search-box input{width:100%;padding:0 32px 0 30px;height:30px;-webkit-box-sizing:border-box;box-sizing:border-box;background:#fff;font-size:14px;border:0 none;border-radius:5px;outline:0 none;}
+.search-box .i-clear{width:28px;height:28px;content:'';position:absolute;right:0px;top:9px;}
+.i-clear:before,.i-clear:after{content:'';width:15px;height:1px;background:#999;position:absolute;top:12px;left:6px;}
+.i-clear:before{transform:rotate(45deg);}
+.i-clear:after{transform:rotate(-45deg);}
+form.search-wrap button{position:absolute;right:0;top:0;width:50px;height:44px;background:none;border:0 none;font-size:15px;color:#099fde;text-align:center;} 
+form.search-wrap .s-back{width:44px;height:44px;display:block;position:absolute;left:0;top:0;}
+/*.s-back:after{width:12px;height:12px;}*/
+form.search-wrap .s-back:after{content:'';width:12px;height:12px;display:block;position:absolute;left:50%;top:50%;margin:-6px 0 0 -6px;border-top:2px solid #8A9094;border-left:2px solid #8A9094; transform:rotate(-45deg);}

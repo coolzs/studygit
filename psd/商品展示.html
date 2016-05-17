@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商品展示</title>
+	<style type="text/css">
+     *{margin:0;padding:0;list-style:none;}
+     .goods{margin:100px;}
+     .goods li{float:left;margin:10px;border:1px solid #ccc;cursor:pointer;}
+     .goods img{display:block;}
+     .big_pic{width:400px;height:300px;border:1px solid #ccc;position:absolute;left:0;top:0;}
+	</style>
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">
+        $(function(){
+        	$('.goods li').mouseover(function(event) {
+        		var big_image=$(this).children('a').attr('href');
+        		var tag=$('<div class="big_pic"><img src='+big_image+'></div>');
+        		$('body').append(tag);
+        		$('.big_pic').css({left:event.pageX+15,top:event.pageY+15});
+        	}).mousemove(function(event) {
+        		$('.big_pic').css({left:event.pageX+15,top:event.pageY+15});
+        	}).mouseout(function(event) {
+        		$('.big_pic').remove();
+        	});
+        })
+	</script>
+</head>
+<body>
+	<ul class="goods">
+		<li><a href="images/05/1_bigger.jpg"><img src="images/05/1.jpg"></a></li>
+		<li><a href="images/05/2_bigger.jpg"><img src="images/05/2.jpg"></a></li>
+		<li><a href="images/05/3_bigger.jpg"><img src="images/05/3.jpg"></a></li>
+		<li><a href="images/05/4_bigger.jpg"><img src="images/05/4.jpg"></a></li>
+		<li><a href="images/05/5_bigger.jpg"><img src="images/05/5.jpg"></a></li>
+		<li><a href="images/05/6_bigger.jpg"><img src="images/05/6.jpg"></a></li>
+	</ul>
+	
+</body>
+</html>

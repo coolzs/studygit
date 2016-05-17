@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>跳过广告</title>
+	<style type="text/css">
+     *{margin:0;padding:0;list-style:none;}
+     span{width:100px;height:30px;display:block;border:1px solid #333;text-align:center;line-height:30px;position:absolute;left:0;top:0;}
+	</style>
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">
+    $(function(){
+      //鼠标移动使得小span跟随着一起在窗口移动；
+      $(window).mousemove(function(event) {
+      	$('span').css({left:event.pageX+10,top:event.pageY+10});
+      });
+    })
+	</script>
+</head>
+<body>
+	<span>跳过广告</span>
+</body>
+</html>

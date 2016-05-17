@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>悬浮小广告</title>
+	<style type="text/css">
+     *{margin:0;padding:0;}
+     img{width:440px;margin:100px auto;cursor:pointer;}
+     .ad_left,.ad_right{width:100px;height:250px;background:orange;border: 1px solid #ccc;position:absolute;left:0;top:0;}
+     .ad_right{right:0;left:auto;}
+     span{position:absolute;right:0;top:0;display:block;border: 1px solid #000;cursor:pointer;}
+	</style>
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">
+     $(function(){
+        var num1=($(window).height()-$('.ad_left').height())/2;
+
+        var ad_show=function(event) {
+     		var win_top=$(window).scrollTop();
+     		var ad_top=win_top+num1;
+     		$('.ad_left,.ad_right').stop().animate({'top':ad_top},800);
+     	}
+
+     	ad_show();
+        //窗口滚动，广告也跟着滚动；
+     	$(window).scroll(ad_show);
+     	//点击关闭广告，广告消失；
+     	$('.ad span').click(function(event) {
+     		$(this).parent().fadeToggle(500);
+     	});
+     })
+	</script>
+</head>
+<body>
+	<div class="ad ad_left"><span>关闭广告</span></div>
+	<div class="ad ad_right"><span>关闭广告</span></div>
+	<img src="images/03/01bg.jpg" width="440" height="5742">
+
+</body>
+</html>
